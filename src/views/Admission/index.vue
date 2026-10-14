@@ -96,7 +96,8 @@ async function loadAdmissions() {
 
 async function loadElderly() {
   const res = await getElderlyList()
-  elderlyList.value = res.data.data || []
+  elderlyList.value = res.data.data.list || []
+  console.log(res.data)
 }
 
 async function loadBeds() {
